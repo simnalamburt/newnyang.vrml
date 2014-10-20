@@ -25,6 +25,10 @@ h2 {
   font-size: 2em;
 }
 
+small {
+  color: gray;
+}
+
 p {
   color: rgb(120,120,120);
   text-align: justify;

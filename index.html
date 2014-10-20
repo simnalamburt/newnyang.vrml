@@ -35,7 +35,8 @@
     </div>
 
     <h3>Definition</h3>
-    <h4>VRML(Virtual Reality Modeling Language)</h4>
+    <h4>VRML <small>Virtual Reality Modeling Language</small>,
+      X3D <small>Extensible 3D</small></h4>
     <p>
     VRML은 Virtual Reality Modeling Language의 약자로 vermal 또는 이니셜로
     발음한다. 원래 Virtual Reality Markup Language 였지만 VRML의 그래픽 특성을
@@ -54,11 +55,7 @@
     추가되어 네트워크 상에서 가상현실을 구현할 토대를 마련하였으나, 다중 참여자
     처리 부분은 미흡하였다.
     </p>
-    <h4>X3D(Extensible 3D)</h4>
-    <p>
-    !!! X3D 설명 쓰기 !!!
-    </p>
-    <h4>Difference</h4>
+    <h4>Differences</h4>
     <p>
     X3D 기술은 VRML보다 더 작고 가벼운 웹 클라이언트로 구현됨.
     웹의 다른 표준인 XHTML, XML, SVG, DOM, SMIL 등과도 함께 쓰일 수 있음
@@ -75,7 +72,12 @@
     <script src="//gist.github.com/shadowcat615/da494cbb15afc9668f53.js"></script>
     <h4>Modifided Model</h4>
     <div id="result" class="right"></div>
-    <p>!!! 설명 쓰기 !!!</p>
+    <p>
+    오브젝트의 위치, 크기, 색 조정함<br>
+    외부 x3d파일 import함<br>
+    오브젝트를 누를 때마다 x,y,z위치값이 오른쪽에 표시됨<br>
+    공이나 바닥을 누르면 랜덤으로 색깔 지정됨<br>
+    </p>
     <x3d>
       <scene>
         <directionallight id="directional" direction="0 0 1" on="TRUE" intensity="1.0" shadowintensity="0.0"></directionallight>
