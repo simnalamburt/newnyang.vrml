@@ -52,7 +52,12 @@ article {
   width: 1px;
 }
 
-#sample { text-align: center; }
+#sample {
+  text-align: center;
+
+  background: white;
+  box-shadow: 0 0 10px 10px white;
+}
 #sample > img { height: 480px; }
 
 x3d {
