@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>가상현실입문</title>
-  <link rel="stylesheet" href="http://www.x3dom.org/download/x3dom.css">
+  <link rel="stylesheet" href="//www.x3dom.org/download/x3dom.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -85,10 +85,10 @@
   <div id="sample-2">
     <x3d>
       <scene>
-        <directionallight id="directional" direction='0 0 1' on="TRUE" intensity='1.0' shadowintensity='0.0'> </directionallight> 
-        <pointlight location='0 0 0' intensity='1'> </pointlight>
-        <pointlight location='3 3 -3' intensity='.5'> </pointlight>
-        <pointlight location='-3 3 3' intensity='.5'> </pointlight>
+        <directionallight id="directional" direction="0 0 1" on="TRUE" intensity="1.0" shadowintensity="0.0"></directionallight>
+        <pointlight location="0 0 0" intensity="1"></pointlight>
+        <pointlight location="3 3 -3" intensity=".5"></pointlight>
+        <pointlight location="-3 3 3" intensity=".5"></pointlight>
         <group>
           <transform translation="0 -1 -5">
             <shape onclick="changeColor(event)">
@@ -127,13 +127,13 @@
               <material diffusecolor="#FFB83C"></material>
             </appearance>
           </shape>
-          <inline url="deer.x3d"> </inline>
+          <inline url="deer.x3d"></inline>
         </group>
       </scene>
     </x3d>
   </div>
 
-  <script src="http://www.x3dom.org/download/x3dom.js"></script>
+  <script src="//www.x3dom.org/download/x3dom.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
