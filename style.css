@@ -53,32 +53,5 @@ article {
   width: 1px;
 }
 
-[id|=sample] {
-  /*
-  background: white;
-  box-shadow: 0 0 10px 10px white;
-  */
-  text-align: center;
-}
-
-#sample-0 > img {
-  height: 480px;
-}
-
-#sample-1 > img {
-  width: 995px;
-}
-
-#sample {
-  padding: 200px 0;
-}
-
-x3d {
-  border: none;
-  float: none;
-}
-
-.x3dom-canvas {
-  width: 80%;
-  float: none !important;
-}
+#sample { text-align: center; }
+#sample > img { height: 480px; }
