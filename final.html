@@ -132,45 +132,46 @@
         <pointlight location='0 0 0' intensity='1'> </pointlight>
         <pointlight location='3 3 -3' intensity='.5'> </pointlight>
         <pointlight location='-3 3 3' intensity='.5'> </pointlight>
-        <group onclick="handleClick(event)"></group>
-        <transform translate="0 0 -13">
+        <group onclick="handleClick(event)">
+          <transform translate="0 0 -13">
+            <shape>
+            <appearance>
+              <material id="color" diffusecolor="#60E8CD"></material>
+            </appearance>
+            <sphere radius="1.0"></sphere>
+            </shape>
+          </transform>
+          <transform translation="0 -1 -5">
+            <shape>
+              <appearance>
+                <material id="color" diffusecolor="#76ECFF"></material>
+              </appearance>
+              <box size="20 .1 20"></box>
+            </shape>
+          </transform>
+          <transform translation="3 3 -13">
+            <shape onclick="changeColor();">
+              <appearance>
+                <material id="color" diffusecolor="#60A9E8"></material>
+              </appearance>
+              <sphere radius="1.5"></sphere>
+            </shape>
+          </transform>
+          <transform translation="-3 3 -13">
+            <shape onclick="changeColor();">
+              <appearance>
+                <material id="color" diffusecolor="#6A89FF"></material>
+              </appearance>
+              <sphere radius=".5"></sphere>
+            </shape>
+          </transform>
           <shape>
-          <appearance>
-            <material id="color" diffusecolor="#60E8CD"></material>
-          </appearance>
-          <sphere radius="1.0"></sphere>
-          </shape>
-        </transform>
-        <transform translation="0 -1 -5">
-          <shape>
             <appearance>
-              <material id="color" diffusecolor="#76ECFF"></material>
+              <material diffusecolor="#FFB83C"></material>
             </appearance>
-            <box size="20 .1 20"></box>
           </shape>
-        </transform>
-        <transform translation="3 3 -13">
-          <shape onclick="changeColor();">
-            <appearance>
-              <material id="color" diffusecolor="#60A9E8"></material>
-            </appearance>
-            <sphere radius="1.5"></sphere>
-          </shape>
-        </transform>
-        <transform translation="-3 3 -13">
-          <shape onclick="changeColor();">
-            <appearance>
-              <material id="color" diffusecolor="#6A89FF"></material>
-            </appearance>
-            <sphere radius=".5"></sphere>
-          </shape>
-        </transform>
-        <shape>
-          <appearance>
-            <material diffusecolor="#FFB83C"></material>
-          </appearance>
-        </shape>
-        <inline url="deer.x3d"> </inline>
+          <inline url="deer.x3d"> </inline>
+        </group>
       </scene>
     </x3d>
   </p>
@@ -178,18 +179,18 @@
   <script src="http://www.x3dom.org/download/x3dom.js"></script>
   <script>
     function handleClick(event) {
+      var position = event.hitPnt;
+      alert('x : '+rgb[0]+'\ny : '+rgb[1]+'\nz : '+rgb[2]);
 
-      var r = event.hitPnt[0];
-      var g = event.hitPnt[1];
-      var b = event.hitPnt[2];
-
-      //Display color values
+      /*
+      // Display color values
       $('#colR').html(r);
       $('#colG').html(g);
       $('#colB').html(b);
 
-      //Visualize color
+      // Visualize color
       $('#colorBox').css('background-color', 'rgb(' + r + ',' + g + ',' + b + ')');
+      */
     }
   </script>
 </body>
