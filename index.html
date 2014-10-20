@@ -132,17 +132,17 @@
         <pointlight location='0 0 0' intensity='1'> </pointlight>
         <pointlight location='3 3 -3' intensity='.5'> </pointlight>
         <pointlight location='-3 3 3' intensity='.5'> </pointlight>
-        <group onclick="handleClick(event)">
+        <group>
           <transform translate="0 0 -13">
-            <shape>
-            <appearance>
-              <material id="color" diffusecolor="#60E8CD"></material>
-            </appearance>
-            <sphere radius="1.0"></sphere>
+            <shape onclick="changeColor(event)">
+              <appearance>
+                <material id="color" diffusecolor="#60E8CD"></material>
+              </appearance>
+              <sphere radius="1.0"></sphere>
             </shape>
           </transform>
           <transform translation="0 -1 -5">
-            <shape>
+            <shape onclick="changeColor(event)">
               <appearance>
                 <material id="color" diffusecolor="#76ECFF"></material>
               </appearance>
@@ -150,7 +150,7 @@
             </shape>
           </transform>
           <transform translation="3 3 -13">
-            <shape onclick="changeColor();">
+            <shape onclick="changeColor(event)">
               <appearance>
                 <material id="color" diffusecolor="#60A9E8"></material>
               </appearance>
@@ -158,7 +158,7 @@
             </shape>
           </transform>
           <transform translation="-3 3 -13">
-            <shape onclick="changeColor();">
+            <shape onclick="changeColor(event)">
               <appearance>
                 <material id="color" diffusecolor="#6A89FF"></material>
               </appearance>
@@ -177,9 +177,11 @@
   </p>
   <script src="http://www.x3dom.org/download/x3dom.js"></script>
   <script>
-    function handleClick(event) {
-      var pos = event.hitPnt;
-      alert('x : '+pos[0]+'\ny : '+pos[1]+'\nz : '+pos[2]);
+    function changeColor(e) {
+      console.log(e);
+
+      var obj = e.hitObject;
+      obj.querySelector('#color').diffusecolor = '#000000';
     }
   </script>
 </body>
