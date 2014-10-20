@@ -133,20 +133,20 @@
         <pointlight location='3 3 -3' intensity='.5'> </pointlight>
         <pointlight location='-3 3 3' intensity='.5'> </pointlight>
         <group>
-          <transform translate="0 0 -13">
-            <shape onclick="changeColor(event)">
-              <appearance>
-                <material id="color" diffusecolor="#60E8CD"></material>
-              </appearance>
-              <sphere radius="1.0"></sphere>
-            </shape>
-          </transform>
           <transform translation="0 -1 -5">
             <shape onclick="changeColor(event)">
               <appearance>
                 <material id="color" diffusecolor="#76ECFF"></material>
               </appearance>
               <box size="20 .1 20"></box>
+            </shape>
+          </transform>
+          <transform translation="0 0 -13">
+            <shape onclick="changeColor(event)">
+              <appearance>
+                <material id="color" diffusecolor="#60E8CD"></material>
+              </appearance>
+              <sphere radius="1.0"></sphere>
             </shape>
           </transform>
           <transform translation="3 3 -13">
