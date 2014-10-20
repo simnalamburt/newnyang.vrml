@@ -1,82 +1,65 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<script type='text/javascript' src='http://www.x3dom.org/download/x3dom.js'>
-  function handleClick(event) {
-
-    var r = event.hitPnt[0];
-    var g = event.hitPnt[1];
-    var b = event.hitPnt[2];
-
-    //Display color values
-    $('#colR').html(r);
-    $('#colG').html(g);
-    $('#colB').html(b);
-
-    //Visualize color
-    $('#colorBox').css('background-color', 'rgb(' + r + ',' + g + ',' + b + ')');
-  }
-</script>
-
-<link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link>
-<style>
-  x3d {
-    border: 0px;
-    background: #E1FFEF;
-  }
-
-  body {
-    background-color: #E1FFEF;
-  }
-
-  h1 {
-    font-family: Arial;
-    font-size: x-large;
-    font-weight: bold;
-    text-align: center;
-    margin: 1em;
-  }
-  h2{
-    text-align:center;
-    margin:1em;
-  }
-  div {
-    font-family: arial;
-
-  }
-  p1{
-    float : right;
-  }
-  p{
-    color:rgba(120,120,120,1)
-  }
-  .box1{
-    float:left;
-    margin:5px;
-    padding:15px;
-    width:600px;
-    height:400px;
-    border:0px;
-  }
-  .box2 {
-    float: left;
-    margin: 5px;
-    padding: 15px;
-    width: 200px;
-    border: 0px;
-  }
-  .box3 {
-    float: left;
-    margin: 5px;
-    padding: 15px;
-    width: 400;
-    border: 0px;
-    clear: both;
-  }
-</style>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <title></title>
+  <meta charset="UTF-8">
+  <title>가상현실입문</title>
+  <link rel="stylesheet" href="http://www.x3dom.org/download/x3dom.css">
+  <style>
+    x3d {
+      border: 0px;
+      background: #E1FFEF;
+    }
+
+    body {
+      background-color: #E1FFEF;
+    }
+
+    h1 {
+      font-family: Arial;
+      font-size: x-large;
+      font-weight: bold;
+      text-align: center;
+      margin: 1em;
+    }
+    h2{
+      text-align:center;
+      margin:1em;
+    }
+    div {
+      font-family: arial;
+
+    }
+    p1{
+      float : right;
+    }
+    p{
+      color:rgba(120,120,120,1)
+    }
+    .box1{
+      float:left;
+      margin:5px;
+      padding:15px;
+      width:600px;
+      height:400px;
+      border:0px;
+    }
+    .box2 {
+      float: left;
+      margin: 5px;
+      padding: 15px;
+      width: 200px;
+      border: 0px;
+    }
+    .box3 {
+      float: left;
+      margin: 5px;
+      padding: 15px;
+      width: 400;
+      border: 0px;
+      clear: both;
+    }
+  </style>
 </head>
 <body>
   <h1>[가상현실입문] HW#5 2012-12451 이지은</h1>
@@ -191,5 +174,22 @@
       </scene>
     </x3d>
   </p>
+  <script src="http://www.x3dom.org/download/x3dom.js"></script>
+  <script>
+    function handleClick(event) {
+
+      var r = event.hitPnt[0];
+      var g = event.hitPnt[1];
+      var b = event.hitPnt[2];
+
+      //Display color values
+      $('#colR').html(r);
+      $('#colG').html(g);
+      $('#colB').html(b);
+
+      //Visualize color
+      $('#colorBox').css('background-color', 'rgb(' + r + ',' + g + ',' + b + ')');
+    }
+  </script>
 </body>
 </html>
