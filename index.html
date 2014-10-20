@@ -74,6 +74,7 @@
     <h4>Example Code</h4>
     <script src="//gist.github.com/shadowcat615/da494cbb15afc9668f53.js"></script>
     <h4>Modifided Model</h4>
+    <div id="result" class="right"></div>
     <p>!!! 설명 쓰기 !!!</p>
     <x3d>
       <scene>
@@ -81,7 +82,7 @@
         <pointlight location="0 0 0" intensity="1"></pointlight>
         <pointlight location="3 3 -3" intensity=".5"></pointlight>
         <pointlight location="-3 3 3" intensity=".5"></pointlight>
-        <group>
+        <group onclick="getPos(event)">
           <transform translation="0 -1 -5">
             <shape onclick="changeColor(event)">
               <appearance>
