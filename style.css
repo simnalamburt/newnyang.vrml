@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  padding-bottom: 120px;
 
   background: #E1FFEF;
   font-size: 12pt;
@@ -66,5 +67,5 @@ x3d {
   height: 70vh;
   border: none;
   background: transparent;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
