@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<script type='text/javascript' src='http://www.x3dom.org/download/x3dom.js'> 
+    function handleClick(event) {
+
+        var r = event.hitPnt[0];
+        var g = event.hitPnt[1];
+        var b = event.hitPnt[2];
+
+        //Display color values
+        $('#colR').html(r);
+        $('#colG').html(g);
+        $('#colB').html(b);
+
+        //Visualize color
+        $('#colorBox').css('background-color', 'rgb(' + r + ',' + g + ',' + b + ')');
+    }
+</script>
+ 
+<link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link> 
+<style>
+    x3d {
+        border: 0px;
+        background: #E1FFEF;
+    }
+
+    body {
+        background-color: #E1FFEF;
+    }
+
+    h1 {
+        font-family: Arial;
+        font-size: x-large;
+        font-weight: bold;
+        text-align: center;
+        margin: 1em;
+    }
+    h2{
+        text-align:center;
+        margin:1em;
+    }
+    div {
+        font-family: arial;
+
+    }
+    p1{
+        float : right;
+    }
+    p{
+        color:rgba(120,120,120,1)
+    }
+    .box1{
+        float:left;
+        margin:5px;
+        padding:15px;
+        width:600px;
+        height:400px;
+        border:0px;
+    }
+    .box2 {
+        float: left;
+        margin: 5px;
+        padding: 15px;
+        width: 200px;
+        border: 0px;
+    }
+    .box3 {
+        float: left;
+        margin: 5px;
+        padding: 15px;
+        width: 400;
+        border: 0px;
+        clear: both;
+    }
+</style>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>[가상현실입문] HW#5 2012-12451 이지은</h1>
+    <h2>Research on VRML / X3D</h2>
+    <div class="box1">
+        <h3>Definition</h3>
+        <h4>VRML(Virtual Reality Modeling Language)</h4>
+        <p> 
+            VRML은 Virtual Reality Modeling Language의 약자로 vermal 또는 이니셜로 발음한다. 원래 Virtual Reality Markup Language
+            였지만 VRML의 그래픽 특성을 반영하기 위해 Markup은 1995년 이후 Modeling으로 바뀌었다.
+            웹에 특화된, 3D 인터랙티브 벡터 그래픽을 나타내는 표준 파일 형식이며 3D공간에서의 html이라고 생각하면 된다.
+            최종 버전은 VRML97(VRML2 / VRML 2.0이며 X3D로 계승되었다.
+        </p>
+        <p>
+            1995년 6월에 Silicon Graphics의 Open Inventor 아스키 파일 포맷을 모체로 VRML 1.0이 탄생하였다.
+            그러나 VRML 1.0은 대상을 움직이거나 스위치에 따른 동작이나 변화를 주는 등의 상호작용을 부여할 수 없었고, 그저 정적인 가상공간을 탐색하거나
+            다른 사이트로의 연결기능만을 가지고 있었다.1996년 8월에 이를 개선한 VRML 2.0이 발표되었는데, 라우터 기능으로 가상세계와 대상과의 상호작용,
+            자바 스크립트를 응용한 스크립트 노드(script node)작성, 애니메이션, 스크립트 이벤트처리 등의 가상환경 구성을 위한 기본적인 기능이 추가되어
+            네트워크 상에서 가상현실을 구현할 토대를 마련하였으나, 다중 참여자 처리 부분은 미흡하였다.
+        </p>
+        <h4>X3D(Extensible 3D)</h4>
+        <p>
+
+        </p>
+        <h4>Difference</h4>
+        <p>
+            X3D 기술은 VRML보다 더 작고 가벼운 웹 클라이언트로 구현됨. 웹의 다른 표준인 XHTML, XML, SVG, DOM, SMIL 등과도 함께 쓰일 수 있음
+        </p>
+    </div>                
+    
+    <div class="box2">
+        <h3>Viewer/Editor</h3>
+        <h4>Viewer</h4>
+            <p>
+                BS Contact
+                Blender
+                Cortona Player
+                FreeWRL/FreeX3D
+                InstantReality
+                Sensegraphics H3DAPI
+                X3DOM : web + X3D
+            </p>
+        <h4>Editor</h4>
+            <p>
+                Blender
+                X3D Edit
+                BS Editor
+                Vivaty Studio
+                Xj3D
+            </p>
+        <p>
+            X3DOM : X3D 오픈소스 프레임워크
+        </p>
+    </div>
+    <div class="box3">
+        <h3>Modifying the Text</h3>
+        <h4>Example Screenshots</h4>
+            <img src="ex1.png" alt="Mountain View" style="width:615px;height:485px">
+            <img src="ex2.png" alt="Mountain View" style="width:613px;height:485px">
+        <h4>Example Code</h4>
+            <img src="code1.png" alt="Mountain View" style="width:995px;height:496px">
+            <img src="code2.png" alt="Mountain View" style="width:995px;height:424px">
+        <h4>Modified Code</h4>
+        <h4>Modifided Model</h4>
+        <p></p>
+    </div>
+        <x3d width="1300px" height="400px">
+            <scene>
+                <directionallight id="directional" direction='0 0 1' on="TRUE" intensity='1.0' shadowintensity='0.0'> </directionallight> 
+                <pointlight location='0 0 0' intensity='1'> </pointlight>
+                <pointlight location='3 3 -3' intensity='.5'> </pointlight>
+                <pointlight location='-3 3 3' intensity='.5'> </pointlight>
+                <group onclick="handleClick(event)"></group>
+                <transform translate="0 0 -13">
+                    <shape>
+                    <appearance>
+                        <material id="color" diffusecolor="#60E8CD"></material>
+                    </appearance>
+                    <sphere radius="1.0"></sphere>
+                    </shape>
+                </transform>
+                <transform translation="0 -1 -5">
+                    <shape>
+                        <appearance>
+                            <material id="color" diffusecolor="#76ECFF"></material>
+                        </appearance>
+                        <box size="20 .1 20"></box>
+                    </shape>
+                </transform>
+                <transform translation="3 3 -13">
+                    <shape onclick="changeColor();">
+                        <appearance>
+                            <material id="color" diffusecolor="#60A9E8"></material>
+                        </appearance>
+                        <sphere radius="1.5"></sphere>
+                    </shape>
+                </transform>
+                <transform translation="-3 3 -13">
+                    <shape onclick="changeColor();">
+                        <appearance>
+                            <material id="color" diffusecolor="#6A89FF"></material>
+                        </appearance>
+                        <sphere radius=".5"></sphere> 
+                    </shape>
+                </transform>
+                <shape>
+                    <appearance>
+                        <material diffusecolor="#FFB83C"></material>
+                    </appearance>
+                </shape>
+                <inline url="deer.x3d"> </inline>               
+            </scene>    
+        </x3d>
+    </p>
+</body>
+</html>
